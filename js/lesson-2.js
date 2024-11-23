@@ -80,5 +80,68 @@ function findSubstring(arr, item) {
     ", "
   )}`;
 }
-console.log(findSubstring(wordsArray, substring));
-console.log(findSubstring(wordsArray, substring1));
+// console.log(findSubstring(wordsArray, substring));
+// console.log(findSubstring(wordsArray, substring1));
+
+// * Літерал об'єкта
+//TODO:============task-1=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+// const human = {
+//   userName: "Боб",
+//   hobby: "футбол",
+//   age: 25,
+
+//   greet() {
+//     console.log(`Hello ${this.userName}`);
+//   },
+// };
+
+// console.log(human["userName"]);
+// console.log(human.hobby);
+// console.log(human.age);
+// console.log(human.greet());
+// const human1 = Object.create(human);
+// console.log(human1);
+// human.mood = "happy";
+// human.hobby = "skydiving";
+// // console.log(human);
+// for (const key in human1) {
+//   if (human1.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(human[key]);
+//   }
+// }
+
+const sallarys = {
+  Bob: 1500,
+  Mango: 1700,
+  Ajax: 1900,
+};
+
+// function totalSallarys(obj) {
+//   let totalSum = 0;
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       totalSum += obj[key];
+//     }
+//   }
+
+//   return totalSum;
+// }
+
+// console.log(totalSallarys(sallarys));
+
+function totalSallarys(obj) {
+  let totalSum = 0;
+  for (const sum of Object.values(obj)) {
+    totalSum += sum;
+  }
+
+  return totalSum;
+}
+
+console.log(totalSallarys(sallarys));
