@@ -48,3 +48,37 @@
 //   return str.toLowerCase().replaceAll(" ", "-");
 // }
 //
+
+// /TODO:=========task-3=================
+// Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+const wordsArray = ["JavaScript", "HTML", "CSS", "React"];
+const substring = "s";
+const substring1 = "h";
+
+// function findSubstring(arr, item) {
+//   const newArray = [];
+//   for (const word of arr) {
+//     if (word.toLowerCase().indexOf(item.toLowerCase()) !== -1) {
+//       newArray.push(word);
+//     }
+//   }
+//   return `Масив елементів, що містять підстроку ${item}: ${newArray.join(
+//     ", "
+//   )}`;
+// }
+// console.log(findSubstring(wordsArray, substring));
+
+function findSubstring(arr, item) {
+  const newArray = [];
+  for (const word of arr) {
+    if (word.toLowerCase().includes(item.toLowerCase())) {
+      newArray.push(word);
+    }
+  }
+  return `Масив елементів, що містять підстроку ${item}: ${newArray.join(
+    ", "
+  )}`;
+}
+console.log(findSubstring(wordsArray, substring));
+console.log(findSubstring(wordsArray, substring1));
