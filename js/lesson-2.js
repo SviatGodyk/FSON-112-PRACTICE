@@ -144,4 +144,35 @@ function totalSallarys(obj) {
   return totalSum;
 }
 
-console.log(totalSallarys(sallarys));
+//console.log(totalSallarys(sallarys));
+
+
+
+//TODO:============task-2==============================================
+// Створіть об'єкт "bankAccount" з властивостями "ownerName", "accountNumber", "balance".
+//  Додайте до об'єкту метод "deposit", який дозволяє додавати гроші на рахунок,
+//  та метод "withdraw", який дозволяє знімати гроші з рахунку.
+//  Методи повинні спрацьовувати при натисканні на кнопки “поповнити рахунок”
+// та отримати ‘готівку’ відповідно.Після проведення операції виводити повідомлення про залишок на рахунку.
+
+const bankAccount = {
+    ownerName: 'Kateryna',
+    accountNumber: 1234,
+    balance: 0,
+
+    deposit(sum) {
+        this.balance += sum;
+        return this.balance;
+    },
+
+withdraw(sum) {
+    this.balance -= sum;
+    return `знято ${sum}, Ваш баланс складає ${this.balance}`;
+}
+
+}
+
+bankAccount.deposit(10000);
+
+
+console.log(bankAccount.withdraw(5000));
