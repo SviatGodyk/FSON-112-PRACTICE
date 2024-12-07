@@ -64,3 +64,29 @@
 // const checkEvenNumbersArray = (arr) => arr.every((el) => el % 2 === 0);
 // console.log(checkEvenNumbersArray(numbers));
 // console.log(checkEvenNumbersArray(numbers1));
+
+// //TODO:=========task-05=================
+// // Знайдіть перше непарне число
+
+// const numbers = [2, 2, 6, 8, 9, 10, 12];
+
+// const findElement = (array) => array.find((el) => el % 2 !== 0);
+
+// console.log(findElement(numbers));
+
+// //TODO:=========task-06=================
+// // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+// const numbers = [4, 2, 5, 1, 3];
+
+// const sortedArray = (array) => array.toSorted((a, b) => b - a);
+// console.log(sortedArray(numbers));
+
+//TODO:===============task-07===============================
+// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
+
+const stringArray = ["banana", "orange", "apple", "pear"];
+
+const sortedArray = (array) => array.toSorted((a, b) => b.localeCompare(a));
+
+console.log(sortedArray(stringArray));
