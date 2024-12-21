@@ -25,3 +25,19 @@ a {
 button {
   margin-bottom: 20px;
 }
+.film-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+ 
+}
+ .modal{
+  padding: 100px;
+  background-color: white;
+ }
